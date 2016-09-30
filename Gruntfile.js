@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             name: package.name,
             dir: '.',
             out: './release',
-            version: package.dependencies.electron.slice(1), // eliminate first ^
+            version: package.dependencies.electron.slice(1), // eleminate first
             platform: platform,
             arch: arch,
             overwrite: true

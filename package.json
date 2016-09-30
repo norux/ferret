@@ -2,7 +2,7 @@
   "name": "ferret",
   "version": "0.0.1",
   "description": "Logviewer",
-  "main": "./src/main_process/main.js",
+  "main": "./src/core/main.js",
   "scripts": {
     "start": "electron . dev"
   },
@@ -29,6 +29,8 @@
   "dependencies": {
     "chokidar": "^1.6.0",
     "electron": "^1.4.1",
-    "ssh2": "^0.5.2"
+    "glob": "^7.1.0",
+    "ssh2": "^0.5.2",
+    "winston": "^2.2.0"
   }
 }
