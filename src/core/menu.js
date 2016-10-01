@@ -1,4 +1,4 @@
-const electron = require('electron');
+var electron = require('electron');
 var template = [
     {
         label: 'Ferret',
@@ -85,9 +85,8 @@ var template = [
     }
 ];
 
-exports.createMenu = function() {
-
-    if (process.platform === 'darwin') {
+exports.create = function() {
+    if(process.platform === 'darwin') {
         const name = electron.app.getName();
         template.unshift({
             label: name,
