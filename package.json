@@ -27,8 +27,11 @@
     "load-grunt-tasks": "^3.5.2"
   },
   "dependencies": {
+    "angular": "^1.5.8",
+    "angularjs": "0.0.1",
     "chokidar": "^1.6.0",
     "electron": "^1.4.1",
+    "ng-office-ui-fabric": "^0.12.4",
     "ssh2": "^0.5.2"
   }
 }
