@@ -1,17 +1,9 @@
 var electron = require('electron');
 var app = electron.app;
 var window = require('./window');
-var logger = require('./logger');
+var logger = require('../common/logger');
 
-logger.core.info('aaaaaa');
-logger.core.warn('aaaaaa');
-logger.core.error('aaaaaa');
-
-// var local = require('./tail/local');
-//
-// local.watcher('/Users/norux/test/plain', function(err) {
-//     if(err) console.log(err);
-// });
+require('./ipc/listener');
 
 app.on('ready', window.create);
 app.on('window-all-closed', function () {

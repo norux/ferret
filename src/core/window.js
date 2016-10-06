@@ -1,8 +1,9 @@
 var BrowserWindow = require('electron').BrowserWindow;
 var menu = require('./menu');
 
+var window;
 module.exports.create = function() {
-    let window = new BrowserWindow({
+    window = new BrowserWindow({
         width: 800,
         height: 600,
     });
@@ -18,4 +19,8 @@ module.exports.create = function() {
     });
 
     menu.create();
+};
+
+module.exports.getWindow = function() {
+    return window;
 };
