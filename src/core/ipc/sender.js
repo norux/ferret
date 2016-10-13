@@ -1,9 +1,12 @@
 var window = require('../window');
-var logger = require('../../common/logger');
+var logger = require('../logger');
 
-module.exports.tailLog = function(data) {
+module.exports.tailLog = function(tabId, logs) {
     if(window.getWindow()) {
-        window.WebContents.send('tail-log', data);
+        window.WebContents.send('tail-log', {
+            tabId: tabId,
+            data: logs
+        });
     } else {
         logger.core.warn('window is undefined');
     }

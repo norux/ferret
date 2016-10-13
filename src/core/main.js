@@ -1,7 +1,6 @@
-var electron = require('electron');
-var app = electron.app;
+var app = require('electron').app;
 var window = require('./window');
-var logger = require('../common/logger');
+var logger = require('./logger');
 
 require('./ipc/listener');
 

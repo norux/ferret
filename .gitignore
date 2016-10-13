@@ -5,3 +5,5 @@ logs
 .idea
 .DS_Store
 .logs
+
+tools/test-logs.gen

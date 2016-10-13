@@ -17,16 +17,26 @@
 <script type="text/javascript" src="./ipc/listener.js"></script>
 
 <script type="text/javascript">
-    var logger = require('../common/logger');
+    var logger = require('./logger');
     logger.viewer.info('hi');
 
     var ipcSender = require('./ipc/sender');
-    ipcSender.requestLog({
+    ipcSender.loadLog({
         tabId: 'tab1',
-        path: '/Users/norux/git/ferret/logs/debug_ferret_core.log',
+        path: '/Users/norux/git/ferret/tools/test-logs.gen',
         protocol: 'local',
         reload: false
     });
+
+    ipcSender.loadLog({
+        tabId: 'tab2',
+        path: '/Users/norux/git/ferret/tools/test-logs.gen',
+        protocol: 'local',
+        reload: false
+    });
+
+    ipcSender.closeTab('tab2');
+//    setTimeout(function() {ipcSender.closeTab('tab2')}, 1000);
 </script>
 <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
 <script type="text/javascript" src="../../node_modules/ng-office-ui-fabric/ngOfficeUiFabric.js"></script>

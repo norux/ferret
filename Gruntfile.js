@@ -9,6 +9,7 @@ module.exports = function(grunt) {
             version: package.dependencies.electron.slice(1), // eleminate first
             platform: platform,
             arch: arch,
+            asar: true,
             overwrite: true
         }
     };
