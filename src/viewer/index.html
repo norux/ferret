@@ -1,19 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ferret">
 <head>
     <meta charset="UTF-8">
     <title>Ferret Logviewer</title>
-    <link rel="stylesheet" href="../../node_modules/ng-office-ui-fabric/node_modules/office-ui-fabric/dist/css/fabric.min.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"/>
+    <link rel="stylesheet" href="../../node_modules/angular-ui-grid/ui-grid.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<div class="ms-Grid">
-    <div class="ms-Grid-row">
-        <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">A</div>
-        <div class="ms-Grid-col ms-u-sm6 ms-u-md8 ms-u-lg10">B</div>
+<body ng-controller="mainCtrl">
+    <div class="menu" ng-controller="menuCtrl">
+        <ul>
+            <li>
+                <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span><br/>
+                <span>Files</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span><br/>
+                <span>AutoScroll</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span><br/>
+                <span>Jump</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-erase" aria-hidden="true"></span><br/>
+                <span>Highlight</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span><br/>
+                <span>Search</span>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-filter" aria-hidden="true"></span><br/>
+                <span>filter</span>
+            </li>
+        </ul>
     </div>
-</div>
 
+    <div class="workspace" ng-controller="workCtrl">
+        <div class="tab">
+            <ul>
+                <li>
+                    tab1
+                    <span class="glyphicon glyphicon-remove removeBtn" aria-hidden="true"></span>
+                </li>
+                <li>
+                    tab1
+                    <span class="glyphicon glyphicon-remove removeBtn" aria-hidden="true"></span>
+                </li>
+                <li>
+                    tab1
+                    <span class="glyphicon glyphicon-remove removeBtn" aria-hidden="true"></span>
+                </li>
+                <li>
+                    tab1
+                    <span class="glyphicon glyphicon-remove removeBtn" aria-hidden="true"></span>
+                </li>
+            </ul>
+            <div class="addBtn"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></div>
+        </div>
+        <div class="logs">
+            <div ui-grid="gridOptions" class="logList"></div>
+        </div>
+    </div>
 <!-- script -->
 <script type="text/javascript" src="../../node_modules/angular/angular.js"></script>
-<script type="text/javascript" src="../../node_modules/ng-office-ui-fabric/ngOfficeUiFabric.js"></script>
+<script type="text/javascript" src="../../node_modules/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="../../node_modules/angular-touch/angular-touch.js"></script>
+<script type="text/javascript" src="../../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script type="text/javascript" src="../../node_modules/angular-ui-grid/ui-grid.min.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+
+<script type="text/javascript" src="./controller/menuController.js"></script>
+<script type="text/javascript" src="./controller/workController.js"></script>
 </body>

@@ -1,0 +1,21 @@
+html, body{margin:0;padding:0;width:100%;height:100%;}
+ul, li{margin:0;padding:0;list-style:none;}
+
+.ar{text-align:right;}
+
+.menu ul{height:70px;background-color:#ededed;}
+.menu ul:after{content:" "; display:block; clear:both;}
+.menu ul li{float:left;padding:10px;height:70px;width:80px;font-size:12px;line-height:15px;text-align:center;word-break:break-all;cursor:pointer;}
+.menu ul li .glyphicon{font-size:30px;line-height:35px;vertical-align:top;}
+
+.workspace{width:100%;height:100%;box-sizing:border-box;padding-top:70px;margin-top:-70px;}
+.workspace .tab{position:relative;width:100%;margin-top:10px;box-sizing:border-box;border-bottom:1px solid #ededed;}
+.workspace .tab .addBtn{position:absolute;right:10px;top:5px;}
+.workspace .tab ul:after{content:" ";display:block;clear:both;}
+.workspace .tab ul li{position:relative;padding:5px 20px 5px 5px;width:60px;float:left;text-align:center;box-sizing:border-box;border:1px solid #ededed;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;}
+.workspace .tab ul li .removeBtn{position:absolute;font-size:12px;right:5px;top:10px;}
+
+.workspace .logs{margin-top: -45px;padding: 44px 0 10px 0;box-sizing: border-box;height: 100%;}
+.workspace .logs .logList{height:100%;}
+
+.ui-grid-header{display:none;}
